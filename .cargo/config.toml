@@ -1,0 +1,20 @@
+[build]
+# Default target for x86_64 PC builds
+target = "x86_64-unknown-none"
+
+[target.'cfg(target_os = "none")']
+# Use bootimage for creating bootable disk images
+runner = "bootimage runner"
+
+[target.x86_64-unknown-none]
+# Built-in target for x86_64 bare metal
+runner = "bootimage runner"
+
+[target.aarch64-kewve_os]
+# Custom target for ARM64 mobile builds
+runner = "qemu-system-aarch64 -machine virt -cpu cortex-a57 -kernel"
+
+# Unstable features needed for OS development
+[unstable]
+build-std-features = ["compiler-builtins-mem"]
+build-std = ["core", "compiler_builtins", "alloc"]

@@ -1,0 +1,49 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Bootimage artifacts
+*.bin
+*.img
+*.iso
+
+# Debug files
+*.pdb
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# QEMU files
+*.qcow2
+*.vmdk
+
+# Coverage reports
+tarpaulin-report.html
+cobertura.xml
+
+# Documentation build
+/book/
+/mdbook/
+
+# Local development
+.env
+.env.local
